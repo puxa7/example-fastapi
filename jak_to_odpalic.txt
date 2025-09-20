@@ -1,0 +1,34 @@
+ venv\Scripts\activate  
+
+uvicorn app.main:app --reload
+
+DOKUMENTACJA:
+http://localhost:8000/docs
+
+
+DEBUGGER:
+0. Musisz utworzyć plik jason dla debugera o nazwie launch.json i wrzcić do "katalog_projektu"/.vscode
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug FastAPI (uvicorn)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--reload"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        }
+    ]
+}
+
+
+1. W kodzie wpisz w odpwiednim miejscu breakpoint() 
+2. Wciśnij CTRL+SHIFT+DEBUGGER
+3. Kliknij przycisk PLAY w okienku debugera
+4. Klikaj nie strzałkęw dół, a taką po łuku w prawo
