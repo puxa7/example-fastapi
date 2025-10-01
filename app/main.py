@@ -26,7 +26,7 @@ app.include_router(vote.router)
 
 @app.get("/") 
 def dowolna_nazwa():
-    return {"message":"hello"}
+    return {"message":"hello siemanko"}
 
 
 
